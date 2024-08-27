@@ -14,7 +14,11 @@ iceCreamShop([], 'honey lavender'); // false
 
 
 function iceCreamShop(flavors, favorite) {
-  // Your code here 
+  if (flavors.length === 0) return false;
+
+  if (flavors.pop() === favorite) return true;
+
+  return iceCreamShop(flavors, favorite);
 }
 
 
